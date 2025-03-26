@@ -4,36 +4,52 @@ function pesquisar(){
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
     campoPesquisa = campoPesquisa.toLowerCase();
 
-    if (campoPesquisa == ""){
-        section.innerHTML = "Nenhum texto digitado!";
-        return;
-    }
-
     let resultados = "";
     let nome = "";
     let descricao = "";
-    for (let dado of dados){
+    if (campoPesquisa == ""){
+        resultados = 
+        `
+            <p><b>ERRO!</b></p>
+            <p>Por favor, <b>digite o nome</b> do filme procurado.</p>
+        `;
+        section.innerHTML = resultados;
+        return;
+    }
+
+    // Priorizando o mostrar resultados correspondentes ao título do filme buscado.
+    // Após isso, mostrar outros resultados de busca.
+    let resultadosArray = [];
+    dados.forEach((dado) => {
         nome = dado.nome.toLocaleLowerCase();
         descricao = dado.descricao.toLocaleLowerCase();
-        
-        if (nome.includes(campoPesquisa) || descricao.includes(campoPesquisa)){
-            resultados += 
-        `
-            <div class="item-resultado">
-                <div class="content">
-                    <h2><a href="#" target="_blank">${dado.nome}</a></h2>
-                    <p class="descricao-meta">${dado.descricao}</p>
-                    <span>R$${dado.preco},00</span>
-                </div>
-                <div class="imagem">
-                    <img src="./imgs/${dado.src}" alt="" srcset="">
-                </div>
+        let itemHTML = `
+        <div class="item-resultado">
+            <div class="content">
+                <h2><a href="#" target="_blank">${dado.nome}</a></h2>
+                <p class="descricao-meta">${dado.descricao}</p>
+                <span>R$${dado.preco},00</span>
             </div>
-        `
+            <div class="imagem">
+                <img src="./imgs/${dado.src}" alt="" srcset="">
+            </div>
+        </div>
+        `;
+
+        if (nome.includes(campoPesquisa)) { // Coloca no começo 
+            resultadosArray.unshift(itemHTML);
+        } else if (descricao.includes(campoPesquisa)) { // Coloca no final
+            resultadosArray.push(itemHTML);
         }
-    }
+    });
+    resultados = resultadosArray.join("");
+
     if(!resultados) {
-        resultados = "<p>Resultado não Encontrado</p>"
+        resultados = 
+        `
+            <p><b>ERRO!</b></p>
+            <p>Resultado <b>não encontrado</b>. Por favor, digite novamente.</p>
+        `;
     }     
     section.innerHTML = resultados;
 }

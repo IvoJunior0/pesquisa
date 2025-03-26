@@ -1,8 +1,8 @@
 let dados = [
-    {   nome : "Kill Bill",
+    {   nome : "Kill Bill Vol.1",
         descricao : "A ex-assassina conhecida apenas como Noiva acorda de um coma de quatro anos decidida a se vingar de Bill, seu ex-amante e chefe, que tentou matá-la no dia do casamento. Ela está motivada a acertar as contas com cada uma das pessoas envolvidas com a perda da filha, da festa de casamento e dos quatro anos de sua vida. Na jornada, a Noiva é submetida a dores físicas agonizantes ao enfrentar a inescrupulosa gangue de Bill, o Esquadrão Assassino de Víboras Mortais.",
         preco: 60,
-        src: "kb.jpg"
+        src: "kb.jpg",
     },
     {
         nome : "Senhor dos Aneis: Sociedade do Anel",
@@ -29,10 +29,10 @@ let dados = [
         src: "ultimato.png"
     },
     {
-        nome: "Vanilla Sky",
-        descricao: "Um jovem rico luta para distinguir os sonhos da realidade após um acidente que o deixa desfigurado",
-        preco: 45,
-        src: "sky."
+        nome: "Brilho Eterno de uma Mente sem Lembranças",
+        descricao: "Joel se surpreende ao saber que seu amor verdadeiro, Clementine, o apagou completamente de sua memória. Ele decide fazer o mesmo, mas muda de ideia. Preso dentro da própria mente enquanto os especialistas se mantêm ocupados em seu apartamento, Joel precisa avisá-los para parar.",
+        preco: 75,
+        src: "brilho.jpg"
     },
     {
         nome: "Sangue Negro",
@@ -44,18 +44,18 @@ let dados = [
         nome: "Magnólia",
         descricao: "Um dia em San Fernando Valley, na Califórnia, nos arredores da rua Magnólia, as vidas de nove personagens são interligadas através de um programa de televisão onde um grupo de três crianças desafia três adultos. O filme acompanha um pai à beira da morte, uma jovem esposa, um enfermeiro, um filho perdido, um policial apaixonado, um menino gênio, um ex-gênio, o apresentador do programa e uma filha afastada, cujas histórias se cruzam por coincidências do destino.",
         preco: 50,
-        src: ""
+        src: "magnolia.jpg"
     },
     {
         nome: "A Origem",
         descricao: "Dom Cobb é um ladrão com a rara habilidade de roubar segredos do inconsciente, obtidos durante o estado de sono. Impedido de retornar para sua família, ele recebe a oportunidade de se redimir ao realizar uma tarefa aparentemente impossível: plantar uma ideia na mente do herdeiro de um império. Para realizar o crime perfeito, ele conta com a ajuda do parceiro Arthur, o discreto Eames e a arquiteta de sonhos Ariadne. Juntos, eles correm para que o inimigo não antecipe seus passos.",
         preco: 60,
-        src: ""
+        src: "incepcion.jpg"
     },
     {
-        nome: "",
-        descricao: "",
-        preco: 0,
-        src: ""
+        nome: "Era uma Vez em... Hollywood",
+        descricao: "Em 1969, Rick Dalton é um ator de TV em declínio que tenta voltar à vida de fama e sucesso em Hollywood ao lado de seu amigo e dublê, Cliff Booth. No processo, eles cruzam com muitas pessoas influentes da indústria cinematográfica, como os novos vizinhos de Rick, o casal Sharon Tate e Roman Polanski, e acabam se envolvendo involuntariamente com a infame família de Charles Manson.",
+        preco: 100,
+        src: "hollywood.jpg"
     }
 ];
