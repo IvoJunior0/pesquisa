@@ -144,3 +144,8 @@ footer {
     bottom: 0; /* Alinha ao fundo da página */
     font-size: .93rem; /* Tamanho da fonte */
 }
+
+.intro {
+    color: #45474B;
+    max-width: 600px;
+}

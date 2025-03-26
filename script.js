@@ -7,6 +7,27 @@ function pesquisar(){
     let resultados = "";
     let nome = "";
     let descricao = "";
+    // Comando se quiser mostrar todos os produtos
+    if (campoPesquisa == "/all") {
+        dados.forEach((dado) => {
+            nome = dado.nome.toLocaleLowerCase();
+            descricao = dado.descricao.toLocaleLowerCase();
+            resultados += `
+            <div class="item-resultado">
+                <div class="content">
+                    <h2><a href="#" target="_blank">${dado.nome}</a></h2>
+                    <p class="descricao-meta">${dado.descricao}</p>
+                    <span>R$${dado.preco},00</span>
+                </div>
+                <div class="imagem">
+                    <img src="./imgs/${dado.src}" alt="" srcset="">
+                </div>
+            </div>
+            `;
+        });
+        section.innerHTML = resultados;
+        return;
+    }
     if (campoPesquisa == ""){
         resultados = 
         `
