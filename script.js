@@ -20,13 +20,17 @@ function pesquisar(){
             resultados += 
         `
             <div class="item-resultado">
-                <h2><a href="#" target="_blank">${dado.nome}</a></h2>
-                <p class="descricao-meta">${dado.descricao}</p>
-                <a href="${dado.link}" target="_blank" rel="noopener noreferrer">Mais Informações</a>
+                <div class="content">
+                    <h2><a href="#" target="_blank">${dado.nome}</a></h2>
+                    <p class="descricao-meta">${dado.descricao}</p>
+                    <span>R$${dado.preco},00</span>
+                </div>
+                <div class="imagem">
+                    <img src="./imgs/${dado.src}" alt="" srcset="">
+                </div>
             </div>
         `
         }
-        
     }
     if(!resultados) {
         resultados = "<p>Resultado não Encontrado</p>"
